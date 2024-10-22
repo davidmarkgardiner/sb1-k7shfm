@@ -38,37 +38,37 @@ const MainContent: React.FC<MainContentProps> = ({ isDarkMode }) => {
           <h1 className="text-3xl font-bold mb-4">Hi, I'm David 👋</h1>
           <h2 className="text-2xl font-semibold mb-4">Lead DevSecOps Engineer & Cloud Architect</h2>
           <p className="mb-4">
-            I'm a passionate Lead Engineer specializing in DevSecFinOps, where I bridge the worlds of development, security, and financial operations. With over 8 years of experience in enterprise-scale infrastructure, I've had the privilege of architecting and implementing solutions across some of the UK's leading financial institutions and government organizations.
+            I'm a passionate Lead Engineer specializing in DevSecFinOps, where I bridge the worlds of development, security, and financial operations. With over 19 years of experience in enterprise-scale infrastructure, I've had the privilege of architecting and implementing solutions across some of the UK's leading financial institutions.
           </p>
           <h3 className="text-xl font-semibold mb-2">What I Bring to the Table</h3>
           <h4 className="text-lg font-semibold mt-4 mb-2">Cloud & Infrastructure Expertise</h4>
           <p className="mb-2">As a certified AWS and Azure Solutions Architect, I specialize in:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>Designing and implementing enterprise-scale kubernetes environments</li>
+            <li>Designing and implementing enterprise-scale kubernetes/ containerized environments</li>
             <li>Managing multi-cloud architectures across azure and aws</li>
-            <li>Building secure, scalable infrastructure using terraform, gitops, and azure-service-operator</li>
+            <li>Building secure, scalable infrastructure using IaC, terraform, gitops, crossplane and azure-service-operator</li>
             <li>Implementing cutting-edge container orchestration with aks and cloud-native technologies</li>
           </ul>
           <h4 className="text-lg font-semibold mt-4 mb-2">Security & Compliance Focus</h4>
           <p className="mb-2">In the financial sector, I've developed robust security frameworks using:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>Advanced security controls with admission-controllers, gatekeeper, and kyverno</li>
+            <li>Advanced security using admission-controllers, gatekeeper, and kyverno</li>
             <li>Network security solutions including cilium and guardicore</li>
-            <li>Comprehensive compliance monitoring through azure-policy</li>
+            {/* <li>Comprehensive compliance monitoring through azure-policy</li> */}
           </ul>
           <h4 className="text-lg font-semibold mt-4 mb-2">Automation & Observability</h4>
           <p className="mb-2">I'm passionate about creating observable, automated systems using:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>Modern CI/CD practices with azure-devops and gitlab</li>
-            <li>Infrastructure as Code using terraform and arm-templates</li>
+            <li>Modern CI/CD practices with GitOps, azure-devops and gitlab-ci</li>
+            <li>Infrastructure as Code using terraform, arm, bicep and aso</li>
             <li>Advanced monitoring solutions with prometheus, grafana, and azure-monitor</li>
-            <li>Automated deployment patterns using gitops, argocd, and fluxcd</li>
+            {/* <li>Automated deployment patterns using gitops, argocd, and fluxcd</li> */}
           </ul>
           <h4 className="text-lg font-semibold mt-4 mb-2">Development & Architecture</h4>
           <p className="mb-2">My technical toolkit includes:</p>
           <ul className="list-disc pl-5 mb-4">
             <li>Application development in golang and python</li>
-            <li>Infrastructure automation using bash, powershell, and yaml</li>
+            {/* <li>Infrastructure automation using bash, powershell, and yaml</li> */}
             <li>Solutions architecture focused on microservices and cloud-native patterns</li>
           </ul>
         </div>
