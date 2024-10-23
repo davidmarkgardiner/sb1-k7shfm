@@ -68,9 +68,11 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
         period="April 2022 - Present"
         description="Lead Azure Kubernetes Service (AKS) engineer focusing on enterprise-scale cloud infrastructure and security implementations."
         achievements={[
-          "Spearheaded collaboration between production teams and Microsoft to ensure successful feature delivery",
-          "Implemented comprehensive security measures using PodSecurityAdmission and Azure Policy",
-          "Established robust observability frameworks using industry-standard tools"
+          "Led the design and implementation of an enterprise-scale AKS consolidation initiative, successfully reducing 1,500+ clusters to under 20, resulting in substantial cost savings while addressing complex challenges in networking, RBAC authentication, storage optimization, and security controls",
+          "Drove enterprise-wide Kubernetes modernization by implementing cutting-edge features, creating comprehensive documentation, and delivering training programs that enabled seamless adoption across teams",
+          "Established and enforced enterprise-wide security standards and best practices, implementing robust security frameworks that enhanced the organization's security posture while maintaining operational efficiency",
+          "Architected and implemented comprehensive observability solutions using {prometheus}, {grafana}, and {azure-monitor}, enabling real-time monitoring and proactive issue resolution across the platform",
+          "Fostered strong partnerships with Microsoft and internal stakeholders to accelerate feature delivery and ensure alignment with enterprise requirements"
         ]}
         technicalFocus={{
           "Infrastructure Management": ["azure-devops", "gitlab", "gitops", "flux", "terraform"],
