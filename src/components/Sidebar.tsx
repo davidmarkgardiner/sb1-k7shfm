@@ -10,7 +10,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isDarkMode }) => {
     <div className="w-full md:w-1/3 mb-8 md:mb-0">
       <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white shadow'} p-6 rounded-lg`}>
         <img
-          src="/me.jpeg"
+          src="me2.png"
           alt="David Gardiner"
           className="w-full h-64 object-cover rounded-lg mb-4"
           onError={(e) => {
