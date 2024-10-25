@@ -5,7 +5,7 @@ import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 import Blog from './components/Blog';
 import Experience from './components/Experience';
-import Skillset from './components/Skillset';
+// import Skillset from './components/Skillset';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -27,7 +27,7 @@ function App() {
           } />
           <Route path="/blog" element={<Blog isDarkMode={isDarkMode} />} />
           <Route path="/experience" element={<Experience isDarkMode={isDarkMode} />} />
-          <Route path="/skillset" element={<Skillset isDarkMode={isDarkMode} />} />
+          {/* <Route path="/skillset" element={<Skillset isDarkMode={isDarkMode} />} /> */}
         </Routes>
       </div>
     </Router>
