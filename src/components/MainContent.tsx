@@ -38,7 +38,7 @@ const MainContent: React.FC<MainContentProps> = ({ isDarkMode }) => {
           <h1 className="text-3xl font-bold mb-4">Hi, I'm David 👋</h1>
           <h2 className="text-2xl font-semibold mb-4">Lead DevSecOps Engineer & Cloud Architect</h2>
           <p className="mb-4">
-            I'm a passionate Lead Engineer specializing in DevSecFinOps, where I bridge the worlds of development, security, and financial operations. With over 19 years of experience in enterprise-scale infrastructure, I've had the privilege of architecting and implementing solutions across some of the UK's leading financial institutions.
+            I'm a passionate Lead Engineer specializing in DevSecOps, where I bridge the worlds of development, deployment, security, and financial operations. With over 19 years of experience in enterprise-scale infrastructure, I've had the privilege of architecting and implementing solutions across some of the UK's leading financial institutions.
           </p>
           <h3 className="text-xl font-semibold mb-2">What I Bring to the Table</h3>
           <h4 className="text-lg font-semibold mt-4 mb-2">Cloud & Infrastructure Expertise</h4>
@@ -52,16 +52,17 @@ const MainContent: React.FC<MainContentProps> = ({ isDarkMode }) => {
           <h4 className="text-lg font-semibold mt-4 mb-2">Security & Compliance Focus</h4>
           <p className="mb-2">In the financial sector, I've developed robust security frameworks using:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>Advanced security using admission-controllers, gatekeeper, and kyverno</li>
+            <li>azure policy, admission-controllers, gatekeeper, and kyverno</li>
             <li>Network security solutions including cilium and guardicore</li>
+            {/* <li>rbac</li> */}
             {/* <li>Comprehensive compliance monitoring through azure-policy</li> */}
           </ul>
           <h4 className="text-lg font-semibold mt-4 mb-2">Automation & Observability</h4>
           <p className="mb-2">I'm passionate about creating observable, automated systems using:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>Modern CI/CD practices with GitOps, azure-devops and gitlab-ci</li>
-            <li>Infrastructure as Code using terraform, arm, bicep and aso</li>
-            <li>Advanced monitoring solutions with prometheus, grafana, and azure-monitor</li>
+            <li>Modern CD using GitOps/ Backstage, Pipeline CI using azure-devops and gitlab-ci</li>
+            <li>Infrastructure as Code using terraform, arm, bicep and Azure Service Opertor, Crossplane</li>
+            <li>Advanced monitoring solutions with prometheus, grafana, container insights and azure-monitor</li>
             {/* <li>Automated deployment patterns using gitops, argocd, and fluxcd</li> */}
           </ul>
           <h4 className="text-lg font-semibold mt-4 mb-2">Development & Architecture</h4>
@@ -91,7 +92,8 @@ const MainContent: React.FC<MainContentProps> = ({ isDarkMode }) => {
           <li>AWS Solutions Architect</li>
           <li>Azure Solutions Architect</li>
           <li>Microsoft Certified Solutions Expert (MCSE) in Server Infrastructure and Private Cloud</li>
-          <li>Expert in Agile methodologies (SCRUM & KANBAN)</li>
+          {/* <li></li> */}
+          {/* <li>Expert in Agile methodologies (SCRUM & KANBAN)</li> */}
         </ul>
       </Section>
 
@@ -110,7 +112,7 @@ const MainContent: React.FC<MainContentProps> = ({ isDarkMode }) => {
         <p className="mb-2">I'm always excited to:</p>
         <ul className="list-disc pl-5">
           <li>Tackle complex infrastructure challenges</li>
-          <li>Implement innovative security solutions</li>
+          <li>Implement innovative solutions</li>
           <li>Share knowledge and best practices</li>
           <li>Connect with fellow technology enthusiasts</li>
         </ul>
