@@ -28,7 +28,7 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
     period: string;
     description: string;
     achievements?: string[];
-    technicalFocus: Record<string, string[]>;
+    // technicalFocus: Record<string, string[]>;
   }) => (
     <div className={`${sectionBg} p-6 rounded-lg mb-6`}>
       <h2 className="text-2xl font-bold mb-2">{title}</h2>
@@ -46,15 +46,15 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
         </>
       )}
 
-      <h3 className="text-xl font-semibold mb-2">Technical Focus:</h3>
+      {/* <h3 className="text-xl font-semibold mb-2">Technical Focus:</h3>
       {Object.entries(technicalFocus).map(([category, techs]) => (
         <div key={category} className="mb-2">
           <strong>{category}:</strong>{' '}
           {techs.map((tech, index) => (
             <TechLabel key={index} tech={tech} />
           ))}
-        </div>
-      ))}
+        </div> */}
+      {/* ))} */}
     </div>
   );
 

@@ -1,49 +1,73 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import SkillCategory from './SkillCategory';
 
 interface SkillsetProps {
   isDarkMode: boolean;
 }
 
 const Skillset: React.FC<SkillsetProps> = ({ isDarkMode }) => {
-  const textColor = isDarkMode ? 'text-gray-100' : 'text-gray-900';
-  const sectionBg = isDarkMode ? 'bg-gray-800' : 'bg-white shadow';
-
-  const SkillCategory = ({ title, skills }: { title: string; skills: string[] }) => (
-    <div className={`${sectionBg} p-6 rounded-lg mb-6`}>
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
-      <div className="flex flex-wrap gap-2">
-        {skills.map((skill, index) => (
-          <span key={index} className={`px-3 py-1 rounded-full text-sm ${isDarkMode ? 'bg-gray-700 text-yellow-400' : 'bg-blue-100 text-blue-800'}`}>
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
+  const skills = {
+    'Cloud & Infrastructure': [
+      { name: 'Kubernetes', size: 'lg' as const },
+      { name: 'Azure', size: 'lg' as const },
+      { name: 'AWS', size: 'md' as const },
+      { name: 'Docker', size: 'md' as const },
+      { name: 'Azure Container Apps', size: 'sm' as const },
+      { name: 'Azure Container Instances', size: 'sm' as const },
+      { name: 'VMware', size: 'sm' as const },
+      { name: 'Nginx', size: 'sm' as const },
+      { name: 'Istio', size: 'sm' as const }
+    ],
+    'DevOps & Automation': [
+      { name: 'GitLab', size: 'md' as const },
+      { name: 'Terraform', size: 'lg' as const },
+      { name: 'Azure DevOps', size: 'lg' as const },
+      { name: 'GitOps', size: 'md' as const },
+      { name: 'Flux', size: 'md' as const },
+      { name: 'ARM Templates', size: 'sm' as const },
+      { name: 'Bicep', size: 'sm' as const },
+      { name: 'PowerShell', size: 'sm' as const },
+      { name: 'Concourse', size: 'sm' as const },
+      { name: 'Jenkins', size: 'sm' as const },
+      { name: 'Go', size: 'sm' as const },
+      { name: 'Python', size: 'sm' as const }
+    ],
+    'Monitoring & Security': [
+      { name: 'Prometheus', size: 'lg' as const },
+      { name: 'Grafana', size: 'lg' as const },
+      { name: 'Azure Monitor', size: 'md' as const },
+      { name: 'Container Insights', size: 'sm' as const },
+      { name: 'Alertmanager', size: 'sm' as const },
+      { name: 'Cilium', size: 'sm' as const }
+    ]
+  };
 
   return (
-    <div className={`container mx-auto px-4 py-8 ${textColor}`}>
-      <h1 className="text-3xl font-bold mb-6">Core Technical Competencies</h1>
+    <div className={`container mx-auto px-4 py-8 ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>
+      <motion.h1
+        className="text-3xl font-bold mb-6"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Core Technical Competencies
+      </motion.h1>
 
-      <SkillCategory
-        title="Cloud & Infrastructure"
-        skills={['kubernetes', 'azure', 'aws', 'containers', 'microservices']}
-      />
-
-      <SkillCategory
-        title="DevOps & Automation"
-        skills={['azure-devops', 'gitlab', 'terraform', 'arm-templates', 'gitops', 'azure-service-operator', 'golang', 'python', 'bash', 'powershell', 'yaml']}
-      />
-
-      <SkillCategory
-        title="Monitoring & Security"
-        skills={['prometheus', 'grafana', 'azure-monitor', 'admission-controllers', 'gatekeeper', 'kyverno', 'azure-policy', 'cni', 'cilium', 'guardicore']}
-      />
-
-      <SkillCategory
-        title="Development"
-        skills={['golang', 'python', 'gitops', 'argocd', 'fluxcd']}
-      />
+      {Object.entries(skills).map(([category, skillList], index) => (
+        <motion.div
+          key={category}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2 }}
+        >
+          <SkillCategory
+            title={category}
+            skills={skillList}
+            isDarkMode={isDarkMode}
+          />
+        </motion.div>
+      ))}
     </div>
   );
 };
