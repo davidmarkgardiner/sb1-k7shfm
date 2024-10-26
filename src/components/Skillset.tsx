@@ -19,7 +19,7 @@ const Skillset: React.FC<SkillsetProps> = ({ isDarkMode }) => {
       { name: 'Nginx', size: 'sm' as const },
       { name: 'Istio', size: 'sm' as const }
     ],
-    'DevOps & Automation': [
+    'DevOps Tools': [
       { name: 'GitLab', size: 'md' as const },
       { name: 'Terraform', size: 'lg' as const },
       { name: 'Azure DevOps', size: 'lg' as const },
