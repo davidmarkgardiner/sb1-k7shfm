@@ -11,6 +11,50 @@ interface SkillCardProps {
 const SkillCard: React.FC<SkillCardProps> = ({ name, size, index, isDarkMode }) => {
   const getTechInfo = (name: string): { logo: string; url: string } => {
     const techInfo: Record<string, { logo: string; url: string }> = {
+      'ArgoCD': {
+        logo: 'https://argo-cd.readthedocs.io/en/stable/assets/logo.png',
+        url: 'https://argo-cd.readthedocs.io/'
+      },
+      'Authentik': {
+        logo: 'https://goauthentik.io/img/icon_top_brand.svg',
+        url: 'https://goauthentik.io/'
+      },
+      'Authelia': {
+        logo: 'https://www.authelia.com/images/branding/logo.png',
+        url: 'https://www.authelia.com/'
+      },
+      'Cert Manager': {
+        logo: 'https://cert-manager.io/images/cert-manager-logo-icon.svg',
+        url: 'https://cert-manager.io/'
+      },
+      'External DNS': {
+        logo: `data:image/svg+xml,${encodeURIComponent(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="${isDarkMode ? '#fbbf24' : '#2563eb'}" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>`)}`,
+        url: 'https://github.com/kubernetes-sigs/external-dns'
+      },
+      'Longhorn': {
+        logo: `data:image/svg+xml,${encodeURIComponent(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="${isDarkMode ? '#fbbf24' : '#2563eb'}" d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.8L19.2 8 12 11.2 4.8 8 12 4.8zM4 9.5l7 3.5v7L4 16.5V9.5zm9 0v7l7-3.5V9.5l-7 3.5z"/></svg>`)}`,
+        url: 'https://longhorn.io/'
+      },
+      'Azure Storage': {
+        logo: 'https://raw.githubusercontent.com/github/explore/master/topics/azure/azure.png',
+        url: 'https://azure.microsoft.com/products/container-storage'
+      },
+      'External Secrets': {
+        logo: `data:image/svg+xml,${encodeURIComponent(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="${isDarkMode ? '#fbbf24' : '#2563eb'}" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.83-3.4 9.36-7 10.6-3.6-1.24-7-5.77-7-10.6V6.3l7-3.12zm-1 4.32v2h2v-2h-2zm0 4v6h2v-6h-2z"/></svg>`)}`,
+        url: 'https://external-secrets.io/'
+      },
+      'Vault': {
+        logo: 'https://www.datocms-assets.com/2885/1620155116-brandhcterraformverticalcolor.svg',
+        url: 'https://developer.hashicorp.com/vault'
+      },
+      'Traefik': {
+        logo: `data:image/svg+xml,${encodeURIComponent(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="${isDarkMode ? '#fbbf24' : '#2563eb'}" d="M12 2L2 19h20L12 2zm0 3l7.5 13h-15L12 5zm-1 5v5h2v-5h-2zm0 6v2h2v-2h-2z"/></svg>`)}`,
+        url: 'https://traefik.io/traefik/'
+      },
+      'Uptime Robot': {
+        logo: `data:image/svg+xml,${encodeURIComponent(`<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="${isDarkMode ? '#fbbf24' : '#2563eb'}" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm3.707-11.707L11 13l-2.707-2.707-1.414 1.414L11 15.828l6.121-6.121-1.414-1.414z"/></svg>`)}`,
+        url: 'https://uptimerobot.com/'
+      },
       'Kubernetes': {
         logo: 'https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg',
         url: 'https://kubernetes.io/'
