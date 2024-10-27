@@ -6,20 +6,20 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isDarkMode }) => {
-const handleDownloadResume = async () => {
+  const handleDownloadResume = async () => {
     try {
       const response = await fetch('/assets/resume/david-gardiner-resume.md');
       const resumeContent = await response.text();
       
       const blob = new Blob([resumeContent], { type: 'text/markdown' });
       const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'david-gardiner-resume.md';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'david-gardiner-resume.md';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error downloading resume:', error);
     }
@@ -29,7 +29,7 @@ window.URL.revokeObjectURL(url);
     <div className="w-full md:w-1/3 mb-8 md:mb-0">
       <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white shadow'} p-6 rounded-lg`}>
         <img
-          src="me2.png"
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
           alt="David Gardiner"
           className="w-full h-64 object-cover rounded-lg mb-4"
           onError={(e) => {

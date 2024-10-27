@@ -52,15 +52,14 @@ const MainContent: React.FC<MainContentProps> = ({ isDarkMode }) => {
           <h4 className="text-lg font-semibold mt-4 mb-2">Security & Compliance Focus</h4>
           <p className="mb-2">In the financial sector, I've developed robust security frameworks using:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>azure policy, admission-controllers, gatekeeper, and kyverno</li>
-            <li>Network security solutions including cilium and guardicore</li>
+          <li>Azure Policy, Admission-Controllers, Gatekeeper (OPA), Kyverno, Azure Defender, Prisma Cloud, Trivy, Cilium, Azure Policy, HashiCorp Vault, Azure Key Vault, External Secrets Operator, Azure AD/Entra ID, Azure Monitor, Azure NSGs, Cosign, Istio Service Mesh</li>
             {/* <li>rbac</li> */}
             {/* <li>Comprehensive compliance monitoring through azure-policy</li> */}
           </ul>
           <h4 className="text-lg font-semibold mt-4 mb-2">Automation & Observability</h4>
           <p className="mb-2">I'm passionate about creating observable, automated systems using:</p>
           <ul className="list-disc pl-5 mb-4">
-            <li>Modern CD using GitOps/ Backstage, Pipeline CI using azure-devops and gitlab-ci</li>
+            <li>Modern CI/CD using GitOps, Backstage, Azure Devops, Gitlab-CI</li>
             <li>Infrastructure as Code using terraform, arm, bicep and Azure Service Opertor, Crossplane</li>
             <li>Advanced monitoring solutions with prometheus, grafana, container insights and azure-monitor</li>
             {/* <li>Automated deployment patterns using gitops, argocd, and fluxcd</li> */}
