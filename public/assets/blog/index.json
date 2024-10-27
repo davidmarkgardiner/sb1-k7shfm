@@ -2,5 +2,5 @@
     "homelab": ["homelab"],
     "kubernetes": [],
     "programming": [],
-    "security": []
+    "security": ["pod-security-standards"]
   }

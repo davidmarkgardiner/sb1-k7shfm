@@ -72,6 +72,15 @@ const Modal: React.FC<ModalProps> = ({ post, onClose, isDarkMode }) => {
                   >
                     {String(children).replace(/\n$/, '')}
                   </SyntaxHighlighter>
+) : !inline ? (
+                  <SyntaxHighlighter
+                    style={tomorrow}
+                    language="plaintext"
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
                 ) : (
                   <code className={className} {...props}>
                     {children}
@@ -85,6 +94,17 @@ const Modal: React.FC<ModalProps> = ({ post, onClose, isDarkMode }) => {
               ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4" {...props} />,
               ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-4" {...props} />,
               li: ({node, ...props}) => <li className="mb-1" {...props} />,
+a: ({node, href, children, ...props}) => (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${isDarkMode ? 'text-blue-300 hover:text-blue-200' : 'text-blue-600 hover:text-blue-800'} underline`}
+                  {...props}
+                >
+                  {children}
+                </a>
+              ),
             }}
           >
             {post.content}
