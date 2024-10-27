@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FolderKanban, Code, Shield, Server, X } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 interface BlogProps {
   isDarkMode: boolean;
@@ -36,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({ post, onClose, isDarkMode }) => {
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.95, opacity: 0 }}
         className={`w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-lg p-6 ${
-          isDarkMode ? 'bg-gray-800' : 'bg-white'
+          isDarkMode ? 'bg-gray-800 text-gray-100' : 'bg-white text-gray-900'
         }`}
         onClick={e => e.stopPropagation()}
       >
@@ -53,7 +57,38 @@ const Modal: React.FC<ModalProps> = ({ post, onClose, isDarkMode }) => {
         </div>
         <p className="text-sm mb-4">{post.date}</p>
         <div className={`prose ${isDarkMode ? 'prose-invert' : ''} max-w-none`}>
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            components={{
+              code({node, inline, className, children, ...props}) {
+                const match = /language-(\w+)/.exec(className || '')
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    style={tomorrow}
+                    language={match[1]}
+                    PreTag="div"
+                    {...props}
+                  >
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                )
+              },
+              h1: ({node, ...props}) => <h1 className="text-3xl font-bold mt-6 mb-4" {...props} />,
+              h2: ({node, ...props}) => <h2 className="text-2xl font-bold mt-5 mb-3" {...props} />,
+              h3: ({node, ...props}) => <h3 className="text-xl font-bold mt-4 mb-2" {...props} />,
+              p: ({node, ...props}) => <p className="mb-4" {...props} />,
+              ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4" {...props} />,
+              ol: ({node, ...props}) => <ol className="list-decimal pl-5 mb-4" {...props} />,
+              li: ({node, ...props}) => <li className="mb-1" {...props} />,
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </div>
       </motion.div>
     </motion.div>
