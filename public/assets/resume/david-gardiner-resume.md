@@ -77,7 +77,7 @@ A passionate Lead Engineer with over 19 years of experience specializing in DevS
 - Oversaw infrastructure hosting and monitoring solutions
 - Implemented deployment automation for sensitive data workloads
 
-### Senior DevOps Engineer | Tesco Bank
+### Senior DevOps Engineer | Barclays Bank
 *August 2017 - June 2018*
 - Led cloud migration of front-end banking applications
 - Implemented Infrastructure as Code using Python and Ansible
