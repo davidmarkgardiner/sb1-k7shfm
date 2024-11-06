@@ -52,7 +52,7 @@ A passionate Lead Engineer with over 19 years of experience specializing in DevS
 
 ### Senior DevSecOps Engineer | Investment Bank
 *April 2022 - Present*
-- Led enterprise-scale AKS consolidation initiative, reducing 1,500+ clusters to under 20
+- Led enterprise-scale AKS consolidation initiative, reducing 1,500+ Kubernetes clusters to under 20
 - Implemented cutting-edge Kubernetes features and delivered comprehensive training programs
 - Established enterprise-wide security standards and best practices
 - Architected comprehensive observability solutions using Prometheus, Grafana, and Azure Monitor
