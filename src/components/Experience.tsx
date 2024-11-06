@@ -68,7 +68,7 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
         period="April 2022 - Present"
         description="Lead Container engineer focusing on enterprise-scale cloud infrastructure."
         achievements={[
-          "Currently leading the design and implementation of an enterprise-scale AKS consolidation initiative, successfully reducing 1,500+ clusters to under 20, resulting in substantial cost savings while addressing complex challenges in networking, RBAC authentication, storage optimization, and security controls",
+          "Currently leading the design and implementation of an enterprise-scale AKS consolidation initiative, reducing 1,500+ clusters to under 20, resulting in substantial cost savings while addressing complex challenges in networking, RBAC authentication, storage optimization, and security controls",
           "Drove enterprise-wide Kubernetes modernization by implementing cutting-edge features, creating comprehensive documentation, and delivering training programs that enabled seamless adoption across organisation",
           "Established and enforced enterprise-wide security standards and best practices, implementing robust security frameworks that enhanced the organization's security posture while maintaining operational efficiency",
           "Architected and implemented comprehensive observability solutions using prometheus, grafana, and azure-monitor, enabling real-time monitoring and proactive issue resolution across the platform",
