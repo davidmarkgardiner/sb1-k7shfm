@@ -133,7 +133,7 @@ const Experience: React.FC<ExperienceProps> = ({ isDarkMode }) => {
 
       <JobExperience
               title="Senior DevOps Engineer"
-              company="Tesco Bank"
+              company="Barclays Bank"
               period="August 2017 - June 2018"
               description="Focused on large-scale Kubernetes deployments and cloud infrastructure management."
               achievements={[
