@@ -23,12 +23,12 @@ A passionate Lead Engineer with over 19 years of experience specializing in DevS
 ### Cloud & Infrastructure
 - Kubernetes, AKS, ACA
 - Azure, AWS
-- Cilium, CNI
+- Cilium, CNI, Istio, Traefik, Nginx
 - VMware, Pivotal Cloud Foundry
 
 ### DevSecOps & Automation
-- Terraform, ARM, Bicep
-- GitOps, Flux, Crossplane
+- Terraform, ARM, Bicep, Azure Service Operator, Kubernetes Resource Orchestrator
+- GitOps, Flux, Crossplane, Argo workflows, events, + rolllouts.
 - Azure DevOps, GitLab CI
 - Azure Service Operator
 - Azure Policy, Admission Controllers
@@ -52,7 +52,7 @@ A passionate Lead Engineer with over 19 years of experience specializing in DevS
 
 ### Senior DevSecOps Engineer | Investment Bank
 *April 2022 - Present*
-- Led enterprise-scale AKS consolidation initiative, reducing 1,500+ Kubernetes clusters to under 20
+- Leading enterprise-scale AKS consolidation initiative, reducing 1,500+ Kubernetes clusters to under 20
 - Implemented cutting-edge Kubernetes features and delivered comprehensive training programs
 - Established enterprise-wide security standards and best practices
 - Architected comprehensive observability solutions using Prometheus, Grafana, and Azure Monitor
@@ -60,9 +60,9 @@ A passionate Lead Engineer with over 19 years of experience specializing in DevS
 
 ### Senior DevOps Engineer | Department for Business, Energy & Industrial Strategy (BEIS)
 *January 2021 - March 2022*
-- Led DevOps initiatives focusing on cloud infrastructure and containerization
+- Leading DevOps initiatives focusing on cloud infrastructure and containerization
 - Established comprehensive monitoring and observability practices
-- Implemented modern deployment technologies
+- Implemented modern deployment technologies using Gitops, Semver, k8s Operator's
 - Enhanced system performance and operational visibility
 
 ### Senior DevOps Engineer | NatWest
