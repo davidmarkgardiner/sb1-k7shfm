@@ -2,8 +2,49 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body {
-  font-family: 'Arial', sans-serif;
+:root {
+  color-scheme: dark;
 }
 
-/* Add any additional custom styles here */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #020617;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #e2e8f0;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #e0f2fe;
+}
+
+.floating-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  opacity: 0.65;
+  animation: float 14s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(18px, -28px, 0) scale(1.08);
+  }
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(30, 41, 59, 0.6));
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 32px;
+  backdrop-filter: blur(18px);
+}
